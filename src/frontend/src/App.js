@@ -143,16 +143,16 @@ function App() {
         }
         if(students.length <= 0){
             return <>
-                <StudentDrawerForm
-                    showDrawer={showDrawer}
-                    setShowDrawer={setShowDrawer}
-                    fetchStudents = {fetchStudents}
-                />
                 <Button
                     onClick={() => setShowDrawer(!showDrawer)}
                     type="primary" shape="round" icon={<PlusOutlined />} size="small">
                     Add New Student
                 </Button>
+                <StudentDrawerForm
+                    showDrawer={showDrawer}
+                    setShowDrawer={setShowDrawer}
+                    fetchStudents = {fetchStudents}
+                />
                 <Empty />
             </>
 
