@@ -1,10 +1,10 @@
 package com.example.demo.student;
 
 
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -18,10 +18,18 @@ public class StudentController {
     @GetMapping
     public List<Student> getAllStudents(){
         return studentService.getAllStudents();
+
     }
 
     @PostMapping
-    public void addStudent(@RequestBody Student student){
+    public void addStudent(@Valid @RequestBody Student student){
         studentService.addStudent(student);
+    }
+
+    @DeleteMapping(path = "{studentId}")
+    void deleteStudent(@PathVariable("studentId") Long studentId){
+        System.out.println("DELETE REQUEST FOR STUDENT WITH ID " + studentId);
+        studentService.deleteStudent(studentId);
+
     }
 }

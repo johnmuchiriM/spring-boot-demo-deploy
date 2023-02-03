@@ -12,7 +12,7 @@ const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
 function StudentDrawerForm({showDrawer, setShowDrawer, fetchStudents}) {
     const onCLose = () => setShowDrawer(false);
-    const [submitting, setSubmitting] = useState(false)
+    const [submitting, setSubmitting] = useState(false);
 
     const onFinish = student => {
         setSubmitting(true);
@@ -24,14 +24,17 @@ function StudentDrawerForm({showDrawer, setShowDrawer, fetchStudents}) {
                 successNotification(
                     "Student successfully added",
                     `${student.name} was added to the system`
-                    );
+                    )
                 fetchStudents();
+            })
+            .catch(err =>{
+            console.log(err)
+            err.response.json().then(res => {
+                console.log(res)
+                errorNotification("There was an issue", `${res.message} [${res.status}] [ ${res.error}]`,"bottomLeft")
+            });
 
-            }).catch(err => {
-                console.log(err)
-        }).finally(()=>{
-            setSubmitting(false)
-        })
+        }).finally(() => setSubmitting(false))
     };
 
     const onFinishFailed = errorInfo => {
