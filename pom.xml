@@ -212,10 +212,8 @@
                                     <goal>install-node-and-npm</goal>
                                 </goals>
                                 <configuration>
-                                    <nodeVersion>v4.6.0</nodeVersion>
-
-                                    <!-- optional: with node version greater than 4.0.0 will use npm provided by node distribution -->
-                                    <npmVersion>2.15.9</npmVersion>
+                                    <nodeVersion>v15.4.0</nodeVersion>
+                                    <npmVersion>7.3.0</npmVersion>
                                 </configuration>
                             </execution>
                             <execution>
