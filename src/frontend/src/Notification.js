@@ -2,7 +2,7 @@ import {notification} from "antd";
 
 const openNotificationWithIcon = (type, message, description, placement) => {
     placement = placement || "topRight"
-    notification [type]({message, description, placement});
+    notification[type]({message, description, placement});
 };
 
 export const successNotification = (message, description, placement) => openNotificationWithIcon('success', message, description, placement);
