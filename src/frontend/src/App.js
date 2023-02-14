@@ -9,7 +9,7 @@ import {
     Radio,
     Menu,
     Spin,
-    Table, Tag, Popconfirm
+    Table, Tag, Popconfirm, Divider
 } from 'antd';
 import {
     DesktopOutlined, FileOutlined,
@@ -229,6 +229,14 @@ function App() {
                 </div>
             </Content>
             <Footer style={{ textAlign: 'center' }}>By Jean Francaise</Footer>
+            <Divider>
+                <a
+                    rel= "noopener noreferrer"
+                    target="_blank"
+                    href="https://johnmuchirim.github.io">
+                    Click here to view my Profile
+                </a>
+            </Divider>
         </Layout>
     </Layout>
 }
