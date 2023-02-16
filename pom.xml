@@ -250,9 +250,8 @@
                                         <resource>
                                             <directory>src/frontend/build</directory>
                                         </resource>
-                                    <!--Changed this-->
                                     </resources>
-                                    <outputDirectory>${basedir}/src/main/static</outputDirectory>
+                                    <outputDirectory>${basedir}/target/classes/static</outputDirectory>
                                 </configuration>
 
                             </execution>
