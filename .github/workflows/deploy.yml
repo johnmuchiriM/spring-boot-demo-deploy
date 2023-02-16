@@ -16,7 +16,7 @@ env:
   JAVA_VERSION: 1.15
   #Dockerhub
   DOCKER_HUB_USERNAME: jeanfrancaise
-  # AWS & Elastic Bean Stalk
+  # AWS & Elastic Bean
   AWS_REGION: eu-west-2
   EB_ENVIRONMENT_NAME: Springbootreactfullstack-env
   EB_APPLICATION_NAME: springboot-react-fullstack
@@ -80,7 +80,6 @@ jobs:
         echo -e "Current elasticbeanstalk/docker-compose.yml\n$(cat elasticbeanstalk/docker-compose.yml)"
         git config user.name github-actions
         git config user.email github-actions@github.com
-        git pull
         git add elasticbeanstalk/docker-compose.yml
         git commit -m "new app version: ${BUILD_NUMBER}"
         git push -f
