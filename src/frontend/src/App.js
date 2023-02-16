@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {deleteStudent, getAllStudents} from "./client";
 import {
     Avatar,
@@ -7,6 +7,7 @@ import {
     Empty,
     Layout,
     Radio,
+    Image,
     Menu,
     Spin,
     Table, Tag, Popconfirm, Divider
@@ -188,7 +189,7 @@ function App() {
            pagination={{ pageSize: 50 }}
            scroll={{ y: 500 }}
            rowKey = {(student) => student.id}
-       />;</>
+       /></>
 
     }
 
@@ -228,17 +229,21 @@ function App() {
                     {renderStudents()}
                 </div>
             </Content>
-            <Footer style={{ textAlign: 'center' }}>
-                By Jean Francaise
-                <Divider>
-                    <a
-                    rel= "noopener noreferrer"
-                    target="_blank"
-                    href="https://johnmuchirim.github.io">
-                    Click here to view my Profile
-                </a>
-            </Divider></Footer>
 
+            <Footer style={{ textAlign: 'center' }}>
+                    <Image
+                        width={75}
+                        src="https://miro.medium.com/max/300/0*7Q3yvSIv_t0ioJ-Z.gif"
+                        />
+                    <Divider>
+                        <a
+                        rel= "noopener noreferrer"
+                        target="_blank"
+                        href="https://johnmuchirim.github.io">
+                        Click here to view my Profile
+                        </a>
+                   </Divider>
+            </Footer>
         </Layout>
     </Layout>
 }
