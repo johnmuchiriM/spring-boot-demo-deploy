@@ -199,8 +199,8 @@
                         <groupId>com.github.eirslett</groupId>
                         <artifactId>frontend-maven-plugin</artifactId>
                         <!-- Use the latest released version:
-                        https://repo1.maven.org/maven2/com/github/eirslett/frontend-maven-plugin/ -->
-                        <version>1.9.1</version>
+                                  https://repo1.maven.org/maven2/com/github/eirslett/frontend-maven-plugin/ -->
+                        <version>1.11.2</version>
                         <configuration>
                             <nodeVersion>v4.6.0</nodeVersion>
                             <workingDirectory>src/frontend</workingDirectory>
@@ -250,11 +250,12 @@
                                         <resource>
                                             <directory>src/frontend/build</directory>
                                         </resource>
-                                    <!--Changed this-->
                                     </resources>
-                                    <outputDirectory>${basedir}/src/main/resources/static</outputDirectory>
+                                    <outputDirectory>${basedir}/target/classes/static</outputDirectory>
                                 </configuration>
+
                             </execution>
+
                         </executions>
                     </plugin>
                 </plugins>
