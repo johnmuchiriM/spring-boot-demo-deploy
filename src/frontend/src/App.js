@@ -228,15 +228,17 @@ function App() {
                     {renderStudents()}
                 </div>
             </Content>
-            <Footer style={{ textAlign: 'center' }}>By Jean Francaise</Footer>
-            <Divider>
-                <a
+            <Footer style={{ textAlign: 'center' }}>
+                By Jean Francaise
+                <Divider>
+                    <a
                     rel= "noopener noreferrer"
                     target="_blank"
                     href="https://johnmuchirim.github.io">
                     Click here to view my Profile
                 </a>
-            </Divider>
+            </Divider></Footer>
+
         </Layout>
     </Layout>
 }
