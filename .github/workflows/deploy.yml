@@ -16,7 +16,7 @@ env:
   JAVA_VERSION: 1.15
   #Dockerhub
   DOCKER_HUB_USERNAME: jeanfrancaise
-  # AWS & Elastic Bean Stalk
+  # AWS & Elastic Bean Stalk Details
   AWS_REGION: eu-west-2
   EB_ENVIRONMENT_NAME: Springbootreactfullstack-env
   EB_APPLICATION_NAME: springboot-react-fullstack
