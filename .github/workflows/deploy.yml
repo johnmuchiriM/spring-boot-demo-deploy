@@ -12,7 +12,7 @@ env:
   POSTGRESQL_DB: jean
   POSTGRESQL_USER: postgres
   POSTGRESQL_PASSWORD: password
-  #Java
+  #Java Version
   JAVA_VERSION: 1.15
   #Dockerhub
   DOCKER_HUB_USERNAME: jeanfrancaise
@@ -80,6 +80,7 @@ jobs:
         echo -e "Current elasticbeanstalk/docker-compose.yml\n$(cat elasticbeanstalk/docker-compose.yml)"
         git config user.name github-actions
         git config user.email github-actions@github.com
+        git pull
         git add elasticbeanstalk/docker-compose.yml
         git commit -m "new app version: ${BUILD_NUMBER}"
         git push
