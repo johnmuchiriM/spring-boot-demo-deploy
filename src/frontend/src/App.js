@@ -7,6 +7,7 @@ import {
     Empty,
     Layout,
     Radio,
+    Image,
     Menu,
     Spin,
     Table, Tag, Popconfirm, Divider
