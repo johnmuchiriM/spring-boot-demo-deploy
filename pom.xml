@@ -252,7 +252,7 @@
                                         </resource>
                                     <!--Changed this-->
                                     </resources>
-                                    <outputDirectory>${basedir}/target/classes/static</outputDirectory>
+                                    <outputDirectory>${basedir}/src/main/static</outputDirectory>
                                 </configuration>
 
                             </execution>
