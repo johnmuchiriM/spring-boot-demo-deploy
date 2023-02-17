@@ -240,7 +240,7 @@ function App() {
                         rel= "noopener noreferrer"
                         target="_blank"
                         href="https://johnmuchirim.github.io">
-                        Check out my profile
+                        Check out my profile on this Link
                         </a>
                    </Divider>
             </Footer>
