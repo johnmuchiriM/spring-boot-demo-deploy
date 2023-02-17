@@ -15,7 +15,7 @@ import {
 import {
     DesktopOutlined, FileOutlined,
     LoadingOutlined,
-    PieChartOutlined, PlusOutlined,
+    PlusOutlined,
     TeamOutlined,
     UserOutlined,
 } from '@ant-design/icons';
