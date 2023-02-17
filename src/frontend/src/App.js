@@ -15,7 +15,7 @@ import {
 import {
     DesktopOutlined, FileOutlined,
     LoadingOutlined,
-    PieChartOutlined, PlusOutlined,
+    PlusOutlined,
     TeamOutlined,
     UserOutlined,
 } from '@ant-design/icons';
@@ -44,7 +44,7 @@ const TheAvatar = ({name}) => {
 
 const removeStudent = (studentId, callback) => {
     deleteStudent(studentId).then(()=>{
-        successNotification("student deleted", `student with id ${studentId} was deleted`);
+        successNotification("guest deleted", `guest with id ${studentId} was deleted`);
         callback();
     }).catch(err =>{
         console.log(err.response)
@@ -174,13 +174,13 @@ function App() {
            title={() =>
                <>
 
-                   <Tag>Number of students</Tag>
+                   <Tag>Number of guests</Tag>
                <Badge count={students.length} className = "site-badge-count-4" />
                    <br/>
                    <Button
                        onClick={() => setShowDrawer(!showDrawer)}
                        type="primary" shape="round" icon={<PlusOutlined />} size="small">
-                       Add New Student
+                       Add New Reservation
                    </Button>
 
                </>
@@ -198,11 +198,8 @@ function App() {
                onCollapse={setCollapsed}>
             <div className="logo" />
             <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
-                <Menu.Item key="1" icon={<PieChartOutlined />}>
-                    Option 1
-                </Menu.Item>
                 <Menu.Item key="2" icon={<DesktopOutlined />}>
-                    Option 2
+                    RSVP
                 </Menu.Item>
                 <SubMenu key="sub1" icon={<UserOutlined />} title="User">
                     <Menu.Item key="3">Guest</Menu.Item>
