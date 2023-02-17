@@ -42,7 +42,7 @@ function StudentDrawerForm({showDrawer, setShowDrawer, fetchStudents}) {
     };
 
     return <Drawer
-        title="Create new student"
+        title="Create new guest"
         width={720}
         onClose={onCLose}
         visible={showDrawer}
@@ -68,18 +68,18 @@ function StudentDrawerForm({showDrawer, setShowDrawer, fetchStudents}) {
                     <Form.Item
                         name="name"
                         label="Name"
-                        rules={[{required: true, message: 'Please enter student name'}]}
+                        rules={[{required: true, message: 'Please enter guest name'}]}
                     >
-                        <Input placeholder="Please enter student name"/>
+                        <Input placeholder="Please enter guest name"/>
                     </Form.Item>
                 </Col>
                 <Col span={12}>
                     <Form.Item
                         name="email"
                         label="Email"
-                        rules={[{required: true, message: 'Please enter student email'}]}
+                        rules={[{required: true, message: 'Please enter guest email'}]}
                     >
-                        <Input placeholder="Please enter student email"/>
+                        <Input placeholder="Please enter guest email"/>
                     </Form.Item>
                 </Col>
             </Row>
