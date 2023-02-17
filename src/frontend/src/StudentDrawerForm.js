@@ -22,7 +22,7 @@ function StudentDrawerForm({showDrawer, setShowDrawer, fetchStudents}) {
                 console.log("student added")
                 onCLose();
                 successNotification(
-                    "Student successfully added",
+                    "Guest successfully added",
                     `${student.name} was added to the system`
                     )
                 fetchStudents();
